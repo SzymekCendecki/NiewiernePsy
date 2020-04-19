@@ -1,0 +1,4 @@
+19 kwietnia 2020 wersja 0.0.1
+Rozpoczęcie pracy nad stroną Niewiernych Psów
+    Dodano nagłówek z nazwą studia.
+Dodano menu, wraz z pierwszymi "przyciskami" (divy robią za buttony).
