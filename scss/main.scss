@@ -20,9 +20,14 @@ header, nav{
 
 header{
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   color: #1414b8;
+
+  h1, h3{
+    width: 100%;
+    text-align: center;
+  }
 }
 
 nav{
@@ -31,13 +36,53 @@ nav{
   align-items: center;
   
   div{
-    width: 100px;
-    height: 30px;
     border: 1px solid #000;
     border-radius: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
    
+  }
+}
+
+#mainContainer{
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) {
+  header{
+    display: none;
+  }
+
+  nav{
+    display: flex;
+    flex-wrap: wrap;
+
+    div{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  header{
+    display: inline-block;
+  }
+
+  nav{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  nav{
+    div{
+      width: 100px;
+      height: 30px;
+    }
   }
 }

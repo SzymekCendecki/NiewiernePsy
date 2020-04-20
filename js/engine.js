@@ -81,28 +81,44 @@ var _classes = __webpack_require__(2);
 
 var header = new _classes.Element("header", "body");
 header.createElement();
+
 var h1 = new _classes.Element("h1", "header");
 h1.createElement();
 document.querySelector("h1").innerHTML = "NIEWIERNE PSY";
 
+var h3 = new _classes.Element("h3", "header");
+h3.createElement();
+document.querySelector("h3").innerHTML = "nemo est dominus meus";
+
 var nav = new _classes.Element("nav", "body");
 nav.createElement();
 
-var about = new _classes.Element("div", "nav");
-about.createElement();
-document.querySelector("nav > div:nth-child(1)").innerHTML = "O NAS";
+var home = new _classes.ElementIdTxt("div", "nav", "home", "START");
+home.createElement();
 
-document.querySelector("nav > div:nth-child(1)").addEventListener("click", function () {
+var about = new _classes.ElementIdTxt("div", "nav", "about", "O NAS");
+about.createElement();
+
+var games = new _classes.ElementIdTxt("div", "nav", "games", "GRY");
+games.createElement();
+
+var graphic = new _classes.ElementIdTxt("div", "nav", "graphic", "GRAFIK");
+graphic.createElement();
+
+document.querySelector("#about").addEventListener("click", function () {
     console.log("działa");
 });
 
-var games = new _classes.Element("div", "nav");
-games.createElement();
-document.querySelector("nav > div:nth-child(2)").innerHTML = "GRY";
+document.querySelector("#games").addEventListener("click", function () {
+    console.log("działa");
+});
 
-var graphic = new _classes.Element("div", "nav");
-graphic.createElement();
-document.querySelector("nav > div:nth-child(3)").innerHTML = "GRAFIK";
+document.querySelector("#graphic").addEventListener("click", function () {
+    console.log("działa");
+});
+
+var mainContainer = new _classes.ElementId("div", "body", "mainContainer");
+mainContainer.createElement();
 
 /***/ }),
 /* 2 */
@@ -116,6 +132,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -137,6 +157,55 @@ var Element = exports.Element = function () {
 
     return Element;
 }();
+
+var ElementId = exports.ElementId = function (_Element) {
+    _inherits(ElementId, _Element);
+
+    function ElementId(what, where, id) {
+        _classCallCheck(this, ElementId);
+
+        var _this = _possibleConstructorReturn(this, (ElementId.__proto__ || Object.getPrototypeOf(ElementId)).call(this, what, where));
+
+        _this.id = id;
+        return _this;
+    }
+
+    _createClass(ElementId, [{
+        key: "createElement",
+        value: function createElement() {
+            var el = document.createElement(this.what);
+            el.id = this.id;
+            document.querySelector(this.where).append(el);
+        }
+    }]);
+
+    return ElementId;
+}(Element);
+
+var ElementIdTxt = exports.ElementIdTxt = function (_ElementId) {
+    _inherits(ElementIdTxt, _ElementId);
+
+    function ElementIdTxt(what, where, id, text) {
+        _classCallCheck(this, ElementIdTxt);
+
+        var _this2 = _possibleConstructorReturn(this, (ElementIdTxt.__proto__ || Object.getPrototypeOf(ElementIdTxt)).call(this, what, where, id));
+
+        _this2.text = text;
+        return _this2;
+    }
+
+    _createClass(ElementIdTxt, [{
+        key: "createElement",
+        value: function createElement() {
+            var el = document.createElement(this.what);
+            el.id = this.id;
+            el.innerHTML = this.text;
+            document.querySelector(this.where).append(el);
+        }
+    }]);
+
+    return ElementIdTxt;
+}(ElementId);
 
 /***/ })
 /******/ ]);

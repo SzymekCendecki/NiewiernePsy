@@ -1,4 +1,12 @@
 19 kwietnia 2020 wersja 0.0.1
 Rozpoczęcie pracy nad stroną Niewiernych Psów
-    Dodano nagłówek z nazwą studia.
-Dodano menu, wraz z pierwszymi "przyciskami" (divy robią za buttony).
+    Utworzono klasę do tworzenia elementów DOM (klasa Element).
+Dodano nagłówek z nazwą studia.
+    Dodano menu, wraz z pierwszymi "przyciskami" (divy robią za buttony).
+
+20 kwietnia 2020 wersja 0.0.2
+Dodano nową klasę rozszerzającą klasę Element o dodawanie id, do utworzonego obiektu (klasa ElementId);
+    Dodano nową klasę rozszerzającą klasę ElementId o dodawanie tekstu, do utworzonego obiektu (klasa ElementIdTxt);
+Dodano sentencje do header.
+    Poprawiono css header'a.
+Dodano wstępnie responsywność strony.
