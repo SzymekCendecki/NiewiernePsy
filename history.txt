@@ -14,3 +14,4 @@ Dodano wstępnie responsywność strony.
 21 kwietnia 2020 - wersja 0.0.3
 Dodano pliki .json. 
     Dodano tekst do pliku about.json.
+Dodano tekst do pliku games.json.

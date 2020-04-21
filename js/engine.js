@@ -151,6 +151,11 @@ document.querySelector("#graphic").addEventListener("click", function () {
     });
 });
 
+//simpleConverter:https://szymekcendecki.github.io/simple-converter/
+//simpleConverter2: https://szymekcendecki.github.io/simple-converter-ver2/
+//scssLibary: https://szymekcendecki.github.io/scss_css-library/
+//plityczny Atlas świata: https://szymekcendecki.github.io/atlas-85/
+
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
