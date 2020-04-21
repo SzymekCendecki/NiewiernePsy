@@ -27,17 +27,33 @@ games.createElement();
 let graphic = new ElementIdTxt("div", "nav", "graphic", "GRAFIK");
 graphic.createElement();
 
+let mainContainer = new ElementId("div", "body", "mainContainer");
+mainContainer.createElement();
+
+const path = 'https://szymekcendecki.github.io/NiewiernePsy/json/'
+
+document.querySelector("#home").addEventListener("click", ()=>{
+    fetch(path + 'home.json').then(response => response.json()).then(data => { 
+        document.querySelector("#mainContainer").innerHTML = "";
+     }).catch(error => console.error(error))
+});
+
 document.querySelector("#about").addEventListener("click", ()=>{
-    console.log("działa");
+    fetch(path + 'about.json').then(response => response.json()).then(data => { 
+        document.querySelector("#mainContainer").innerHTML = "";
+        document.querySelector("#mainContainer").innerHTML = data.about;
+
+    }).catch(error => console.error(error))
 });
 
 document.querySelector("#games").addEventListener("click", ()=>{
-    console.log("działa");
+    fetch(path + 'games.json').then(response => response.json()).then(data => { 
+        document.querySelector("#mainContainer").innerHTML = "";
+    }).catch(error => console.error(error))
 });
 
 document.querySelector("#graphic").addEventListener("click", ()=>{
-    console.log("działa");
+    fetch(path + 'graphic.json').then(response => response.json()).then(data => { 
+        document.querySelector("#mainContainer").innerHTML = "";
+    }).catch(error => console.error(error))
 });
-
-let mainContainer = new ElementId("div", "body", "mainContainer");
-mainContainer.createElement();

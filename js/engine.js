@@ -105,20 +105,51 @@ games.createElement();
 var graphic = new _classes.ElementIdTxt("div", "nav", "graphic", "GRAFIK");
 graphic.createElement();
 
+var mainContainer = new _classes.ElementId("div", "body", "mainContainer");
+mainContainer.createElement();
+
+var path = 'https://szymekcendecki.github.io/NiewiernePsy/json/';
+
+document.querySelector("#home").addEventListener("click", function () {
+    fetch(path + 'home.json').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        document.querySelector("#mainContainer").innerHTML = "";
+    }).catch(function (error) {
+        return console.error(error);
+    });
+});
+
 document.querySelector("#about").addEventListener("click", function () {
-    console.log("działa");
+    fetch(path + 'about.json').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        document.querySelector("#mainContainer").innerHTML = "";
+        document.querySelector("#mainContainer").innerHTML = data.about;
+    }).catch(function (error) {
+        return console.error(error);
+    });
 });
 
 document.querySelector("#games").addEventListener("click", function () {
-    console.log("działa");
+    fetch(path + 'games.json').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        document.querySelector("#mainContainer").innerHTML = "";
+    }).catch(function (error) {
+        return console.error(error);
+    });
 });
 
 document.querySelector("#graphic").addEventListener("click", function () {
-    console.log("działa");
+    fetch(path + 'graphic.json').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        document.querySelector("#mainContainer").innerHTML = "";
+    }).catch(function (error) {
+        return console.error(error);
+    });
 });
-
-var mainContainer = new _classes.ElementId("div", "body", "mainContainer");
-mainContainer.createElement();
 
 /***/ }),
 /* 2 */

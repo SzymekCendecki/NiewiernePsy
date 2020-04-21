@@ -10,3 +10,7 @@ Dodano nową klasę rozszerzającą klasę Element o dodawanie id, do utworzoneg
 Dodano sentencje do header.
     Poprawiono css header'a.
 Dodano wstępnie responsywność strony.
+
+21 kwietnia 2020 - wersja 0.0.3
+Dodano pliki .json. 
+    Dodano tekst do pliku about.json.
