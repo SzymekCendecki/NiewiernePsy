@@ -102,6 +102,9 @@ about.createElement();
 var games = new _classes.ElementIdTxt("div", "nav", "games", "GRY");
 games.createElement();
 
+var projects = new _classes.ElementIdTxt("div", "nav", "projects", "PROJEKTY");
+projects.createElement();
+
 var graphic = new _classes.ElementIdTxt("div", "nav", "graphic", "GRAFIK");
 graphic.createElement();
 
@@ -141,6 +144,16 @@ document.querySelector("#games").addEventListener("click", function () {
     });
 });
 
+document.querySelector("#procjects").addEventListener("click", function () {
+    fetch(path + 'projects.json').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        document.querySelector("#mainContainer").innerHTML = "";
+    }).catch(function (error) {
+        return console.error(error);
+    });
+});
+
 document.querySelector("#graphic").addEventListener("click", function () {
     fetch(path + 'graphic.json').then(function (response) {
         return response.json();
@@ -150,11 +163,6 @@ document.querySelector("#graphic").addEventListener("click", function () {
         return console.error(error);
     });
 });
-
-//simpleConverter:https://szymekcendecki.github.io/simple-converter/
-//simpleConverter2: https://szymekcendecki.github.io/simple-converter-ver2/
-//scssLibary: https://szymekcendecki.github.io/scss_css-library/
-//plityczny Atlas świata: https://szymekcendecki.github.io/atlas-85/
 
 /***/ }),
 /* 2 */

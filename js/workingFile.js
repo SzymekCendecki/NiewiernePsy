@@ -24,6 +24,9 @@ about.createElement();
 let games = new ElementIdTxt("div", "nav", "games", "GRY");
 games.createElement();
 
+let projects = new ElementIdTxt("div", "nav", "projects", "PROJEKTY");
+projects.createElement();
+
 let graphic = new ElementIdTxt("div", "nav", "graphic", "GRAFIK");
 graphic.createElement();
 
@@ -52,13 +55,14 @@ document.querySelector("#games").addEventListener("click", ()=>{
     }).catch(error => console.error(error))
 });
 
+document.querySelector("#procjects").addEventListener("click", ()=>{
+    fetch(path + 'projects.json').then(response => response.json()).then(data => { 
+        document.querySelector("#mainContainer").innerHTML = "";
+    }).catch(error => console.error(error))
+});
+
 document.querySelector("#graphic").addEventListener("click", ()=>{
     fetch(path + 'graphic.json').then(response => response.json()).then(data => { 
         document.querySelector("#mainContainer").innerHTML = "";
     }).catch(error => console.error(error))
 });
-
-//simpleConverter:https://szymekcendecki.github.io/simple-converter/
-//simpleConverter2: https://szymekcendecki.github.io/simple-converter-ver2/
-//scssLibary: https://szymekcendecki.github.io/scss_css-library/
-//plityczny Atlas świata: https://szymekcendecki.github.io/atlas-85/

@@ -15,3 +15,9 @@ Dodano wstępnie responsywność strony.
 Dodano pliki .json. 
     Dodano tekst do pliku about.json.
 Dodano tekst do pliku games.json.
+
+22 kwietnia 2020 - wersja 0.0.4
+Aktualizacja tekstu w pliku about.json.
+    Dodano tekst do pliku graphic.json.
+Dodano plik projects.json, tekst oraz 'button' do strony głównej.
+    Dodano tekst do pliku home.json.
