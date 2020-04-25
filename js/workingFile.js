@@ -1,4 +1,4 @@
-import { Element, ElementId, ElementIdTxt } from './classes/classes.js';
+import { Element, ElementId, ElementTxt, ElementIdTxt } from './classes/classes.js';
 
 let header = new Element("header", "body");
 header.createElement();
@@ -38,6 +38,7 @@ const path = 'https://szymekcendecki.github.io/NiewiernePsy/json/'
 document.querySelector("#home").addEventListener("click", ()=>{
     fetch(path + 'home.json').then(response => response.json()).then(data => { 
         document.querySelector("#mainContainer").innerHTML = "";
+        document.querySelector("#mainContainer").innerHTML = data.txt1;
      }).catch(error => console.error(error))
 });
 
@@ -52,17 +53,35 @@ document.querySelector("#about").addEventListener("click", ()=>{
 document.querySelector("#games").addEventListener("click", ()=>{
     fetch(path + 'games.json').then(response => response.json()).then(data => { 
         document.querySelector("#mainContainer").innerHTML = "";
+               
+        for(let i = 1; i<Object.values(data).length - 1; i++){
+            const element = document.createElement('p');
+            element.innerHTML = `<a href="${Object.values(data)[i]}" target="_blank">${Object.keys(data)[i]}</a>`;
+            document.querySelector('#mainContainer').appendChild(element);
+        }
     }).catch(error => console.error(error))
 });
 
-document.querySelector("#procjects").addEventListener("click", ()=>{
+document.querySelector("#projects").addEventListener("click", ()=>{
     fetch(path + 'projects.json').then(response => response.json()).then(data => { 
         document.querySelector("#mainContainer").innerHTML = "";
+               
+        for(let i = 1; i<Object.values(data).length - 1; i++){
+            const element = document.createElement('p');
+            element.innerHTML = `<a href="${Object.values(data)[i]}" target="_blank">${Object.keys(data)[i]}</a>`;
+            document.querySelector('#mainContainer').appendChild(element);
+        }
     }).catch(error => console.error(error))
 });
 
 document.querySelector("#graphic").addEventListener("click", ()=>{
     fetch(path + 'graphic.json').then(response => response.json()).then(data => { 
         document.querySelector("#mainContainer").innerHTML = "";
+
+        for(let i = 1; i<Object.values(data).length; i++){
+            const element = document.createElement('p');
+            element.innerHTML = `${Object.values(data)[i]}`;
+            document.querySelector('#mainContainer').appendChild(element);
+        }
     }).catch(error => console.error(error))
 });

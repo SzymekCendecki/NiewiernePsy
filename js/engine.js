@@ -118,6 +118,7 @@ document.querySelector("#home").addEventListener("click", function () {
         return response.json();
     }).then(function (data) {
         document.querySelector("#mainContainer").innerHTML = "";
+        document.querySelector("#mainContainer").innerHTML = data.txt1;
     }).catch(function (error) {
         return console.error(error);
     });
@@ -139,16 +140,28 @@ document.querySelector("#games").addEventListener("click", function () {
         return response.json();
     }).then(function (data) {
         document.querySelector("#mainContainer").innerHTML = "";
+
+        for (var i = 1; i < Object.values(data).length - 1; i++) {
+            var element = document.createElement('p');
+            element.innerHTML = "<a href=\"" + Object.values(data)[i] + "\" target=\"_blank\">" + Object.keys(data)[i] + "</a>";
+            document.querySelector('#mainContainer').appendChild(element);
+        }
     }).catch(function (error) {
         return console.error(error);
     });
 });
 
-document.querySelector("#procjects").addEventListener("click", function () {
+document.querySelector("#projects").addEventListener("click", function () {
     fetch(path + 'projects.json').then(function (response) {
         return response.json();
     }).then(function (data) {
         document.querySelector("#mainContainer").innerHTML = "";
+
+        for (var i = 1; i < Object.values(data).length - 1; i++) {
+            var element = document.createElement('p');
+            element.innerHTML = "<a href=\"" + Object.values(data)[i] + "\" target=\"_blank\">" + Object.keys(data)[i] + "</a>";
+            document.querySelector('#mainContainer').appendChild(element);
+        }
     }).catch(function (error) {
         return console.error(error);
     });
@@ -159,6 +172,12 @@ document.querySelector("#graphic").addEventListener("click", function () {
         return response.json();
     }).then(function (data) {
         document.querySelector("#mainContainer").innerHTML = "";
+
+        for (var i = 1; i < Object.values(data).length; i++) {
+            var element = document.createElement('p');
+            element.innerHTML = "" + Object.values(data)[i];
+            document.querySelector('#mainContainer').appendChild(element);
+        }
     }).catch(function (error) {
         return console.error(error);
     });
@@ -226,16 +245,40 @@ var ElementId = exports.ElementId = function (_Element) {
     return ElementId;
 }(Element);
 
+var ElementTxt = exports.ElementTxt = function (_Element2) {
+    _inherits(ElementTxt, _Element2);
+
+    function ElementTxt(what, where, txt) {
+        _classCallCheck(this, ElementTxt);
+
+        var _this2 = _possibleConstructorReturn(this, (ElementTxt.__proto__ || Object.getPrototypeOf(ElementTxt)).call(this, what, where));
+
+        _this2.txt = txt;
+        return _this2;
+    }
+
+    _createClass(ElementTxt, [{
+        key: "createElement",
+        value: function createElement() {
+            var el = document.createElement(this.what);
+            el.append(this.text);
+            document.querySelector(this.where).append(el);
+        }
+    }]);
+
+    return ElementTxt;
+}(Element);
+
 var ElementIdTxt = exports.ElementIdTxt = function (_ElementId) {
     _inherits(ElementIdTxt, _ElementId);
 
     function ElementIdTxt(what, where, id, text) {
         _classCallCheck(this, ElementIdTxt);
 
-        var _this2 = _possibleConstructorReturn(this, (ElementIdTxt.__proto__ || Object.getPrototypeOf(ElementIdTxt)).call(this, what, where, id));
+        var _this3 = _possibleConstructorReturn(this, (ElementIdTxt.__proto__ || Object.getPrototypeOf(ElementIdTxt)).call(this, what, where, id));
 
-        _this2.text = text;
-        return _this2;
+        _this3.text = text;
+        return _this3;
     }
 
     _createClass(ElementIdTxt, [{

@@ -23,6 +23,19 @@ export class ElementId extends Element{
     }
 }
 
+export class ElementTxt extends Element{
+    constructor(what, where, txt) {
+        super(what, where);
+        this.txt = txt;
+      }
+    
+      createElement(){
+        let el = document.createElement(this.what);
+        el.append(this.text);
+        document.querySelector(this.where).append(el);
+    }
+}
+
 export class ElementIdTxt extends ElementId{
     constructor(what, where, id, text) {
         super(what, where, id);

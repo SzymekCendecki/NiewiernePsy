@@ -21,3 +21,9 @@ Aktualizacja tekstu w pliku about.json.
     Dodano tekst do pliku graphic.json.
 Dodano plik projects.json, tekst oraz 'button' do strony głównej.
     Dodano tekst do pliku home.json.
+
+25 kwietnia 2020 - wersja 0.0.5
+Poprawka wyświetlania listy z grami, w zakładce 'GRY'.
+    Dodanie zdarzenia wyświetlania listy projektów w zakładce 'PROJEKTY'.
+Poprawka tekstu w pliku graphic.json.
+    Dodanie zdarzenia wyświetlania grafiku dla zakładki 'GRAFIK'.
