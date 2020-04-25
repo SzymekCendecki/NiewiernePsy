@@ -1,11 +1,6 @@
 {
     "graphic":"Aktualny grafik stream'ów:",
-    "friday:":"piątek",
-    "saturday":"sobota",
-    "sunday":"niedziela",
-    "eveOnline":"Eve Online",
-    "neverwinterNight":"Neverwinter Nights",
-    "wot":"World of Tanks",
-    "hours1922":"godziny 19 - 22",
-    "hours1719":"godziny 17 - 19"
+    "friday:":"piątek 19 - 22 EVE Online ",
+    "saturday":"sobota 19 - 22 Neverwinter Nights",
+    "sunday":"niedziela 17 - 19 World of Tanks"
 }
