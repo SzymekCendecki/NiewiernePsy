@@ -27,3 +27,10 @@ Poprawka wyświetlania listy z grami, w zakładce 'GRY'.
     Dodanie zdarzenia wyświetlania listy projektów w zakładce 'PROJEKTY'.
 Poprawka tekstu w pliku graphic.json.
     Dodanie zdarzenia wyświetlania grafiku dla zakładki 'GRAFIK'.
+
+26 kwietnia 2020 - wersja 0.0.6
+Ostylowanie przycisków nawigacji.
+
+27 kwietnia 2020 - wersja 0.0.7
+Poprawka szerokości oraz pozycji (wyśrodkowanie) diva "mainConatiner".
+    Utworzenie trzech plików scss dla 
