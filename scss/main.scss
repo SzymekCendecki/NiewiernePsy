@@ -26,12 +26,16 @@ header{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  color: #1414b8;
+  color: #0f52ba;
 
   h1, h3{
     width: 100%;
     text-align: center;
-  }
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5em;
+    text-shadow: 3px 3px 1px #000;
+
+  } 
 }
 
 nav{
@@ -44,7 +48,9 @@ nav{
     border-radius: 25%;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
   }
 
   div:hover{
@@ -61,6 +67,10 @@ nav{
 #mainContainer{
   width: 90%;
   margin: 0 auto;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-shadow: 1px 1px #fff;
 }
 
 

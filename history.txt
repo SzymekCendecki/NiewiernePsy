@@ -33,4 +33,9 @@ Ostylowanie przycisków nawigacji.
 
 27 kwietnia 2020 - wersja 0.0.7
 Poprawka szerokości oraz pozycji (wyśrodkowanie) diva "mainConatiner".
-    Utworzenie trzech plików scss dla 
+    Utworzenie trzech plików scss dla responsywności.
+
+1 maja 2020 - wersja 0.0.8
+Dodano fonty z google fonts.
+    Dodano cienie dla tekstu.
+Poprawiono tekst w pliku about.json.
