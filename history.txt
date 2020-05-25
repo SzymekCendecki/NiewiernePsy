@@ -39,3 +39,7 @@ Poprawka szerokości oraz pozycji (wyśrodkowanie) diva "mainConatiner".
 Dodano fonty z google fonts.
     Dodano cienie dla tekstu.
 Poprawiono tekst w pliku about.json.
+
+25 maja 2020 - wersja 0.0.9
+Poprawiono grafik streamów. 
+    Dodano tekst. w którym wyjaśniono zmianę gry.

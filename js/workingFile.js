@@ -83,5 +83,12 @@ document.querySelector("#graphic").addEventListener("click", ()=>{
             element.innerHTML = `${Object.values(data)[i]}`;
             document.querySelector('#mainContainer').appendChild(element);
         }
+
+        let p = document.createElement("p");
+        p.innerHTML = "Stream z 23 maja 2020 z Neverwinter Nights został usunięty. Ponoć zostały naruszone czyjeś prawa autorskie. Niewierne Psy nie maja pojęcia w jaki sposób to się mogło stać. Życie. W miejsce Neverwiter Nights będzie teraz Total War - Napoleon. Zobaczym jak to wyjdzie.";
+        document.querySelector('#mainContainer').appendChild(p);
+        
+
     }).catch(error => console.error(error))
 });
+
