@@ -13,21 +13,19 @@ HTML, CSS/SCSS, ES6
 #getting started:
 To start working with the project, you must download it and place it in a directory called NiewiernePsy.
 
-Then, in this directory, start the terminal and run: 
-#npm install
+Then, in this directory, start the terminal and run: npm install
 
 After completing operation in the terminal, run: 
-#gulp watch
+gulp watch
 
 Open the terminal a second time and run: 
-#node_modules / .bin / webpack
+node_modules / .bin / webpack
 
 Remember that starting the terminal with gulp watch and node_modules / .bin / webpack should be in the project directory. In this case, in the NiewiernePsy directory.
 
 Now just open the appropriate program to write the code and start working.
 
-To check your work, run a file called:
-#index.html.
+To check your work, run a file called index.html.
 
 To make changes in the code visible on the page, save the file in which the changes were made and refresh the page.
 
