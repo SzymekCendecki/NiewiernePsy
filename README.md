@@ -1,4 +1,5 @@
 # Niewierne Psy website
+"Official" site of the official "hobby" development studio "Unfaithful Dogs"
 
 
 # ENGLISH LANGUAGE VERSION
@@ -33,6 +34,7 @@ To make changes in the code visible on the page, save the file in which the chan
 
 
 # POLISH LANGUAGE VERSION
+"Oficjalna" strona nieoficjalnego "hobbystycznego"studia developorskiego "Niewierne Psy"
 
 # pomocne linki:
 https://fonts.google.com/
