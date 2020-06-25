@@ -173,15 +173,13 @@ document.querySelector("#graphic").addEventListener("click", function () {
     }).then(function (data) {
         document.querySelector("#mainContainer").innerHTML = "";
 
-        for (var i = 1; i < Object.values(data).length; i++) {
-            var element = document.createElement('p');
-            element.innerHTML = "" + Object.values(data)[i];
-            document.querySelector('#mainContainer').appendChild(element);
-        }
-
         var p = document.createElement("p");
         p.innerHTML = "Stream z 23 maja 2020 z Neverwinter Nights został usunięty. Ponoć zostały naruszone czyjeś prawa autorskie. Niewierne Psy nie maja pojęcia w jaki sposób to się mogło stać. Życie. W miejsce Neverwiter Nights będzie teraz Total War - Napoleon. Zobaczym jak to wyjdzie.";
         document.querySelector('#mainContainer').appendChild(p);
+
+        var p2 = document.createElement("p");
+        p2.innerHTML = "Ważna informacja. Od jutra (26 czerwca 2020), do odwołania, będzie zmiana w grafiku oraz w grach. Streamowana będzie także tylko jedna gra: Eve Online. Zmianie ulegnie platforma, na której będą odbywały się streamy, a będzie to twitch.tv. W planach jest nowy grafik. 26 czerwca 2020 będzie przeprowadzany test na wymienionej platformie. Wstępnie streamy będą w piątki (19 - 22) oraz niedzielę (17 - 20). Czasami będzie stream także w soboty (19 - 22).";
+        document.querySelector('#mainContainer').appendChild(p2);
     }).catch(function (error) {
         return console.error(error);
     });
