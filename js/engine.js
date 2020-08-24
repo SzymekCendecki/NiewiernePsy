@@ -96,5 +96,23 @@ fetch('./json/test.json').then(function (response) {
     return console.error(error);
 });
 
+fetch('./json/polish.json').then(function (response) {
+    return response.json();
+}).then(function (data) {
+
+    console.log(data);
+}).catch(function (error) {
+    return console.error(error);
+});
+
+fetch('./json/english.json').then(function (response) {
+    return response.json();
+}).then(function (data) {
+
+    console.log(data);
+}).catch(function (error) {
+    return console.error(error);
+});
+
 /***/ })
 /******/ ]);
