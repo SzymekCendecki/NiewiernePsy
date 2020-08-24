@@ -20,13 +20,6 @@ document.querySelector("#contactBtn").addEventListener("click", ()=>{
 });
 
 
-fetch('./json/test.json').then(response => response.json()).then(data => { 
-
-    console.log(data.test);
-
-}).catch(error => console.error(error))
-
-
 fetch('./json/polish.json').then(response => response.json()).then(data => { 
 
     console.log(data);

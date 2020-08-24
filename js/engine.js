@@ -87,15 +87,6 @@ document.querySelector("#streamBtn").addEventListener("click", function () {});
 
 document.querySelector("#contactBtn").addEventListener("click", function () {});
 
-fetch('./json/test.json').then(function (response) {
-    return response.json();
-}).then(function (data) {
-
-    console.log(data.test);
-}).catch(function (error) {
-    return console.error(error);
-});
-
 fetch('./json/polish.json').then(function (response) {
     return response.json();
 }).then(function (data) {
