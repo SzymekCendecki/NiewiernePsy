@@ -14,7 +14,7 @@ header, footer{
   height: 10%;
   background-color: rgba(13, 90, 13, 0.9);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-weight: bolder;
   font-size: 2em; 
@@ -51,4 +51,9 @@ nav{
 
 .displayNone{
   display: none;
+}
+
+#languageBtn{
+  width: 4%;
+  height: 40%;
 }
