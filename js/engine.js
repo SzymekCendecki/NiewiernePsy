@@ -90,91 +90,13 @@ var englishBtn = ["about us", "games", "programs", "stream"];
 var englishTXT = ["The name of the studio comes from a story about an attempt to rent a room in Warsaw. In short, the room was not rented to the founder of the studio because ... the atheism of that founder was a problem, and it was problematic for a person who wanted to rent a room (the most authentic story). The date of establishing this unofficial studio is ... Exactly, there is a slight problem with that, as this date has been slightly lost in the darkness of history. For the sake of simplicity, it will be necessary to assume that 'officially' was the same as the creation of the fanpage on Facebook (June 13, 2016). And unofficially, it had to be a little earlier (I guess after the first posts). From the beginning, the studio's plans were to create browser games and learn programming (html, js, css). On January 25, the studio also began streaming games. Three games went first: Eve Online, Neverwinter Nights and World of Tanks. The stream schedule in the 'GRAFIK' tab.", "Audaces Remastered", "Audaces Powerfull", "Hell of the stars", "Pirate cruise", "Simple Game", "Simple Game 2", "Only playable versions of the games are included.", "converter", "converter 2", "SCSS library.", "Political World Atlas '85", "The games are streamed on twitch.tv under the nickname Krupik Hopsas. This channel also has the current stream schedule.", "contact: krupik@autograf.pl"];
 
 var allP = document.querySelectorAll('p');
-var langTxt = document.querySelector("#languageBtn").textContent;
 
 var changeClass = function changeClass(a) {
     document.querySelector(a).classList.remove("displayNone");
     document.querySelector(a).classList.add("displayBlock");
 };
 
-switch (langTxt) {
-    case 'en':
-
-        document.querySelector("#languageBtn").innerHTML = "pl";
-
-        for (var i = 0; i < idBtn.length; i++) {
-            document.querySelector("#" + idBtn[i]).innerHTML = englishBtn[i];
-        }
-
-        for (var _i = 0; _i < allP.length; _i++) {
-            allP[_i].innerHTML = englishTXT[_i];
-        }
-
-        break;
-
-    case 'pl':
-
-        document.querySelector("#languageBtn").innerHTML = "en";
-
-        for (var _i2 = 0; _i2 < idBtn.length; _i2++) {
-            document.querySelector("#" + idBtn[_i2]).innerHTML = polishBtn[_i2];
-        }
-
-        for (var _i3 = 0; _i3 < allP.length; _i3++) {
-            allP[_i3].innerHTML = polishTXT[_i3];
-        }
-
-        break;
-
-}
-
-document.querySelector("#aboutBtn").addEventListener("click", function () {
-
-    for (var _i4 = 0; _i4 < id.length; _i4++) {
-        if (document.querySelector("#" + id[_i4]).getAttribute('class') === "displayBlock") {
-            document.querySelector("#" + id[_i4]).classList.toggle('displayNone');
-        }
-    }
-
-    changeClass("#about");
-});
-
-document.querySelector("#gamesBtn").addEventListener("click", function () {
-    var langTxt = document.querySelector("#languageBtn").textContent;
-
-    for (var _i5 = 0; _i5 < id.length; _i5++) {
-        if (document.querySelector("#" + id[_i5]).getAttribute('class') === "displayBlock") {
-            document.querySelector("#" + id[_i5]).classList.toggle('displayNone');
-        }
-    }
-
-    changeClass("#games");
-});
-
-document.querySelector("#programsBtn").addEventListener("click", function () {
-    for (var _i6 = 0; _i6 < id.length; _i6++) {
-
-        if (document.querySelector("#" + id[_i6]).getAttribute('class') === "displayBlock") {
-            document.querySelector("#" + id[_i6]).classList.toggle('displayNone');
-        }
-    }
-
-    changeClass("#programs");
-});
-
-document.querySelector("#streamBtn").addEventListener("click", function () {
-    for (var _i7 = 0; _i7 < id.length; _i7++) {
-
-        if (document.querySelector("#" + id[_i7]).getAttribute('class') === "displayBlock") {
-            document.querySelector("#" + id[_i7]).classList.toggle('displayNone');
-        }
-    }
-
-    changeClass("#stream");
-});
-
-document.querySelector("#languageBtn").addEventListener("click", function () {
-
+var changeLang = function changeLang() {
     var langTxt = document.querySelector("#languageBtn").textContent;
 
     switch (langTxt) {
@@ -182,12 +104,12 @@ document.querySelector("#languageBtn").addEventListener("click", function () {
 
             document.querySelector("#languageBtn").innerHTML = "pl";
 
-            for (var _i8 = 0; _i8 < idBtn.length; _i8++) {
-                document.querySelector("#" + idBtn[_i8]).innerHTML = englishBtn[_i8];
+            for (var i = 0; i < idBtn.length; i++) {
+                document.querySelector("#" + idBtn[i]).innerHTML = englishBtn[i];
             }
 
-            for (var _i9 = 0; _i9 < allP.length; _i9++) {
-                allP[_i9].innerHTML = englishTXT[_i9];
+            for (var _i = 0; _i < allP.length; _i++) {
+                allP[_i].innerHTML = englishTXT[_i];
             }
 
             break;
@@ -196,17 +118,67 @@ document.querySelector("#languageBtn").addEventListener("click", function () {
 
             document.querySelector("#languageBtn").innerHTML = "en";
 
-            for (var _i10 = 0; _i10 < idBtn.length; _i10++) {
-                document.querySelector("#" + idBtn[_i10]).innerHTML = polishBtn[_i10];
+            for (var _i2 = 0; _i2 < idBtn.length; _i2++) {
+                document.querySelector("#" + idBtn[_i2]).innerHTML = polishBtn[_i2];
             }
 
-            for (var _i11 = 0; _i11 < allP.length; _i11++) {
-                allP[_i11].innerHTML = polishTXT[_i11];
+            for (var _i3 = 0; _i3 < allP.length; _i3++) {
+                allP[_i3].innerHTML = polishTXT[_i3];
             }
 
             break;
 
     }
+};
+
+changeLang();
+
+document.querySelector("#aboutBtn").addEventListener("click", function () {
+
+    for (var i = 0; i < id.length; i++) {
+        if (document.querySelector("#" + id[i]).getAttribute('class') === "displayBlock") {
+            document.querySelector("#" + id[i]).classList.toggle('displayNone');
+        }
+    }
+
+    changeClass("#about");
+});
+
+document.querySelector("#gamesBtn").addEventListener("click", function () {
+
+    for (var i = 0; i < id.length; i++) {
+        if (document.querySelector("#" + id[i]).getAttribute('class') === "displayBlock") {
+            document.querySelector("#" + id[i]).classList.toggle('displayNone');
+        }
+    }
+
+    changeClass("#games");
+});
+
+document.querySelector("#programsBtn").addEventListener("click", function () {
+    for (var i = 0; i < id.length; i++) {
+
+        if (document.querySelector("#" + id[i]).getAttribute('class') === "displayBlock") {
+            document.querySelector("#" + id[i]).classList.toggle('displayNone');
+        }
+    }
+
+    changeClass("#programs");
+});
+
+document.querySelector("#streamBtn").addEventListener("click", function () {
+    for (var i = 0; i < id.length; i++) {
+
+        if (document.querySelector("#" + id[i]).getAttribute('class') === "displayBlock") {
+            document.querySelector("#" + id[i]).classList.toggle('displayNone');
+        }
+    }
+
+    changeClass("#stream");
+});
+
+document.querySelector("#languageBtn").addEventListener("click", function () {
+    changeLang();
 });
 
 /***/ })
