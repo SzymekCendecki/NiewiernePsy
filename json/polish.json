@@ -13,22 +13,3 @@
     "12":"Polityczny Atlas Świata '85",
     "13":"Gry streamowane są na twitch.tv, pod nickiem Krupik Hopsas. Na tym kanale znajduje się również aktualny harmonogram streamów."
 }
-
-document.querySelector("about").classList.remove("displayBlock");
-document.querySelector("games").classList.remove("displayBlock");
-document.querySelector("programs").classList.remove("displayBlock");
-document.querySelector("stream").classList.remove("displayBlock");
-document.querySelector("contact").classList.remove("displayBlock");
-
-switch (expr) {
-    case 'Oranges':
-      console.log('Oranges are $0.59 a pound.');
-      break;
-    case 'Mangoes':
-    case 'Papayas':
-      console.log('Mangoes and papayas are $2.79 a pound.');
-      // expected output: "Mangoes and papayas are $2.79 a pound."
-      break;
-    default:
-      console.log(`Sorry, we are out of ${expr}.`);
-  }
