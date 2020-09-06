@@ -15,74 +15,62 @@
 	<header>
 		<h1>NIEWIERNE PSY</h1>		
 	</header>
+  
+    <nav>
+		<button id="languageBtn">en</button>
+    </nav>
 
-	<nav>
-		<button id="aboutBtn">o nas</button>
-		<button id="gamesBtn">gry</button>
-		<button id="programsBtn">programy</button>
-		<button id="streamBtn">stream</button>
-		<button id="languageBtn">pl</button>
-	</nav>
+    <div id="about">
+        <p id="aboutTxt">
+            Nazwa studia wzięła się od pewnej historii, z próbą wynajęcia pokoju w Warszawie. Krótko rzecz ujmując, założycielowi studia pokój nie został wynajęty, gdyż... problemem był ateizm owego założyciela, a to było problematyczne dla osoby chcącej wynająć pokój (historia jak najbardziej autentyczna). Data założenia tego nieoficjalnego studia to... No właśnie, z tym jest drobny kłopot, gdyż delikatnie zaginęła ta data w mrokach historii. Dla uproszczenia trzeba będzie założyć, iż oficjalnie powstało tego samego co utworzenie fanpage na fejsie (13 czerwca 2016). A nieoficjalnie to musiało być to trochę wcześniej (tak się domyślam po pierwszych postach). Od początku w planach studia było tworzenie gier pod przeglądarkę oraz nauka programowania (html, js, css). 25 stycznia studio rozpoczęło także streamowanie gier. Na pierwszy ogień poszły trzy gry: Eve Online, Neverwinter Nights oraz World of Tanks. Grafik streamów w zakładce GRAFIK.
+        </p>
+    </div>
+     
+    <div id="games">
 
-	<div id="mainContainer">
-		<div id="about" class="displayNone">
-			<p id="aboutP"></p>
-		</div>
+            <div id="gamesLinks">
+                <a href="https://szymekcendecki.github.io/Audaces-remastered" target="_blank"><p id="remasteredP">Audaces Remastered</p></a>
+                <a href="https://szymekcendecki.github.io/Audaces-powerfull/" target="_blank"><p id="powerfullP">Audaces Powerfull</p></a>
+                <a href="https://szymekcendecki.github.io/Pieklo-z-gwiazd" target="_blank"><p id="hellP">Piekło z Gwiazd</p></a>
+                <a href="https://szymekcendecki.github.io/piracki-rejs/" target="_blank"><p id="cruiseP">Piracki Rejs</p></a>
+                <a href="https://szymekcendecki.github.io/simpleGame/" target="_blank"><p id="simpleP">Simple Game</p></a>
+                <a href="https://szymekcendecki.github.io/simpleGame2/" target="_blank"><p id="simple2P">Simple Game 2</p></a>
+            </div>
 
-		<div id="games" class="displayNone">
-			<div id="remastered">
-					<a href="https://szymekcendecki.github.io/Audaces-remastered" target="_blank"><p id="remasteredP"></p></a>
-			</div>
-			
-			<div id="powerfull">
-				<a href="https://szymekcendecki.github.io/Audaces-powerfull/" target="_blank"><p id="powerfullP"></p></a>
-			</div>
-			
-			<div id="hellOfStars">
-				<a href="https://szymekcendecki.github.io/Pieklo-z-gwiazd" target="_blank"><p id="hellP"></p></a>
-			</div>
-		
-			<div id="pirateCruise">
-				<a href="https://szymekcendecki.github.io/piracki-rejs/" target="_blank"><p id="cruiseP"></p></a>
-			</div>
-		
-			<div id="simpleGame">
-				<a href="https://szymekcendecki.github.io/simpleGame/" target="_blank"><p id="simpleP"></p></a>
-			</div>
-		
-			<div id="simpleGame2">
-				<a href="https://szymekcendecki.github.io/simpleGame2/" target="_blank"><p id="simple2P"></p></a>
-			</div>
-	
-			<p id="gameDescription"></p>
-		</div>
-		
-		<div id="programs" class="displayNone">
-			<div id="simpleConverter">
-					<a href="https://szymekcendecki.github.io/simple-converter/" target="_blank"><p id="converterP"></p></a>
-			</div>
-			
-			<div id="secondConverter">
-				<a href="https://szymekcendecki.github.io/simple-converter-ver2" target="_blank"><p id="converter2P"></p></a>
-			</div>
+            <div id="gamesTxt">
+                <p id="gamesDescription">
+                    Uwzględniono tylko grywalne wersje gier.
+                </p>
+            </div>
 
-			<div id="scssLibrary">	
-				<a href="https://szymekcendecki.github.io/scss_css-library/" target="_blank"><p id="scssLibraryP"></p></a>
-			</div>
-			
-			<div id="politicalAtlasWorld">
-				<a href="https://szymekcendecki.github.io/atlas-85/" target="_blank"><p id="atlasP"></p></a>
-			</div>
-		</div>
+    </div>
 
-		<div id="stream" class="displayNone">
-			<p id="streamDescription"></p>
-		</div>
-	</div>
+    <div id="programs">
 
-	<footer>		
-		<p></p>
-	</footer>
+        <div id="programsLinks">
+            <a href="https://szymekcendecki.github.io/simple-converter/" target="_blank"><p id="converterP">Konwerter</p></a>
+            <a href="https://szymekcendecki.github.io/simple-converter-ver2" target="_blank"><p id="converter2P">Konwerter 2</p></a>
+            <a href="https://szymekcendecki.github.io/scss_css-library/" target="_blank"><p id="scssLibraryP">SCSS bibl.</p></a>
+            <a href="https://szymekcendecki.github.io/atlas-85/" target="_blank"><p id="atlasP">Atlas '85</p></a>
+        </div>
+
+        <div id="programsTxt">
+            <p id="programsDescription">
+                Programy do konwersji pikseli na procenty, biblioteka SCSS oraz Polityczny Atlas Świata '85.
+            </p>
+        </div>
+
+    </div>
+   
+    <div id="stream">
+        <p id="streamTxt">
+            Gry streamowane są na twitch.tv, pod nickiem Krupik Hopsas. Na tym kanale znajduje się również aktualny harmonogram streamów.
+        </p>
+    </div>
+
+    <footer>
+        <p id="contact">kontakt: krupik@autograf.pl</p>
+    </footer>
 
 	<script src="js/engine.js"></script>
 	

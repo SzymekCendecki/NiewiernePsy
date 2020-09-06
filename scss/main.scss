@@ -10,80 +10,174 @@ html, body {
    background-color: #d3d3d3;
 }
 
-header, footer{
+header{
   width: 100%;
   height: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   font-weight: bolder;
-  font-size: 2em; 
-  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav, #about, #games, #programs, #stream, footer{
+  margin: 10% 0 0 0;
 }
 
 nav{
+      margin: 1% 0 0 0;
+  }
+
+
+nav{
   width: 100%;
-  height: 5%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  button{
-    width: 7%;
-    height: 90%;
-    font-size: 1.6em;
-    font-weight: bolder;
-    color: #000;
-    background-color: #d3d3d3;
-    border: 1px solid  #d3d3d3;
-    outline: none;
-  }
-
-  button:hover{
-    background-color: rgb(134, 135, 138);
-  }
-
-  button:active{
-    background-color: rgb(78, 79, 82);
-    color: #fff;
-    box-shadow: inset 0 0 10px #000;
-  }
 }
 
-#mainContainer{
-  width: 90%;
-  height: 75%;
-  margin: 0 auto;  
-}
-
-.displayBlock{
-  display: block;
-}
-
-.displayNone{
-  display: none;
-}
 
 #languageBtn{
-  width: 50px;
-  height: 50px;
+  width: 70%;
+  height: 100%;
   background-color: goldenrod;
   font-weight: bolder;
+  font-size: 2em;
   outline: none;
-  border-radius: 50%;
+  border-radius: 10%;
   border: 2px solid black;
   color: #000;
 }
 
-#languageBtn:active{
-  box-shadow: inset 0 0 10px #000;
-  background-color: gold;
+#aboutTxt, #gamesTxt, #programsTxt{
+  display: none;
 }
 
 
-#about, #games, #programs, #stream{
+
+#gamesLinks, #programsLinks{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#gamesLinks > a, #programsLinks > a{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(52, 76, 235);
+  border-radius: 20px;
+  text-align:center;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0 0 0;
+}
+
+#streamTxt{
+  width: 90%;
+  margin: 0 auto;
   text-indent: 20px;
-  padding: 20px 0 0 0;
-  font-weight: bold;
-  font-size: 1.3em;
+  font-weight: bolder;
+  font-size: 1.1em;
+}
+
+#contact{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  #aboutTxt, #gamesTxt, #programsTxt{
+      display: block;
+  }
+
+  nav, #about, #games, #programs, #stream, footer, #gamesTxt, #programsTxt{
+      margin: 5% 0 0 0;
+ }
+
+ nav{
+      margin: 1% 0 0 0;
+  }
+
+  #languageBtn{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+  }
+
+  #about{
+     width: 90%;
+     margin: 0 auto;
+     font-weight: bolder;
+     font-size: 1.2em;
+     text-indent: 25px;
+ }
+
+  #games, #programs{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+  }
+
+  #games > div, #programs > div{
+      width: 48%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  #programs{
+      flex-direction: row-reverse;
+  }
+
+  #gamesLinks > a, #programsLinks > a{
+      width: 100px;
+      height: 100px;               
+  }
+
+  #gamesTxt, #programsTxt{
+      font-weight: bolder;
+     font-size: 1.2em;
+   
+  }
+
+  #programsTxt{
+      text-indent: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+  nav{
+      margin: 1% 0 0 0;
+  }
+
+  h1{
+      font-size: 4em;
+  }
+
+  #about, #gamesTxt, #programsTxt{
+      font-size: 1.6em;
+  }
+
+  #streamTxt{
+      text-align: center;
+      font-size: 1.6em;
+  }
+
+  footer{
+      font-size: 1.4em;
+  }
+
 }
